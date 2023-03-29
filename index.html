@@ -16,15 +16,13 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0" >
 
-                <div class="item">
+                <div class="item" @mouseOver="stopAutoplay" @mouseOut="startAutoplay">
                     <img :src="slides[activeImage].image" alt="slides[activeImage].title" />
                     <div class="text">
                         <h3>{{ slides[activeImage].title }}</h3>
                         <p>{{ slides[activeImage].text }}</p>
                     </div>
                 </div>
-                
-
                 <div class="thumbs">
                     <div class="prev" @click="showPrev"></div>
                     <div class="next" @click="showNext"></div>
@@ -34,7 +32,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>

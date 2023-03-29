@@ -64,6 +64,9 @@ createApp ({
         },
         showCurrentImage (clickedIndex) {
             this.activeImage = clickedIndex
+        },
+        stopAutoplay() {
+            clearInterval(this.interval);
         }
     }
 }).mount("#app")
