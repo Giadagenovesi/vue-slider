@@ -41,6 +41,9 @@ createApp ({
             ]
         }
     },
+    mounted() {
+        this.startAutoplay();
+    },
     methods: {
         showNext() {
             if (this.activeImage < this.slides.length - 1) {
@@ -56,6 +59,8 @@ createApp ({
               this.activeImage = this.slides.length - 1;
             }
         },
+        startAutoplay() {
+            this.interval = setInterval(this.showNext, 3000);
+        }
     }
-
 }).mount("#app")
