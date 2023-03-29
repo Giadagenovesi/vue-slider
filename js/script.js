@@ -61,6 +61,9 @@ createApp ({
         },
         startAutoplay() {
             this.interval = setInterval(this.showNext, 3000);
+        },
+        showCurrentImage (clickedIndex) {
+            this.activeImage = clickedIndex
         }
     }
 }).mount("#app")
